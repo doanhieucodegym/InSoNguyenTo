@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Di Chuyen Hinh</title>
+</head>
+<body onload="docReady()">
+<img id ="lufi" src ="img/Lufi2.jpg" style="position: absolute ; left : 0;top :0;" height="250px" width="150px"/>
+<script>
+    //xay dung ham khi an  phim len
+function upArrowPressed() {
+    let element = document.getElementById("lufi");
+    element.style.top =parseInt(element.style.top) -5 + "px";
+}
+///xay dung  nut xuong
+    function dowArrowPressed() {
+    let element = document.getElementById("lufi");
+        element.style.top =parseInt(element.style.top) +5 + "px";
+
+    }
+    //xay dung nut  sang trai
+    function leftArrowPressed() {
+        let element = document.getElementById("lufi");
+        element.style.left =parseInt(element.style.left) -5 + "px";
+
+    }
+    //xay dung  nut sang  phai
+    function rightArrowPressed() {
+        let element = document.getElementById("lufi");
+        element.style.left =parseInt(element.style.left) +5 + "px";
+
+    }
+    //
+    function moveSelection(v) {
+    switch (v.keyCode) {
+        case 37:
+            leftArrowPressed();
+            break;
+        case  39 :
+            rightArrowPressed();
+            break;
+        case  38 :
+            upArrowPressed();
+            break;
+        case  40:
+            dowArrowPressed();
+            break;
+
+
+    }
+
+    }
+    ///f
+    function docReady() {
+    window.addEventListener('keydown')
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem tra nam nhuan</title>
+</head>
+<script>
+
+    let year = parseInt(prompt("Nhap nam can xet"));
+   // let isLeapYear = false;
+
+
+
+    if (year % 4 == 0) {
+        if (year % 100 == 0) {
+            if (year % 400 == 0) {
+                alert(year + " la namnhuam");
+            } else {
+                alert(year + " la nam khong nhuam");
+            }
+        } else {
+            alert(year + " la nam nhuam");
+        }
+    } else {
+        alert(year + "la nam khong nhuam");
+    }
+
+</script>
+<body>
+<p>
+    kiem tra nam nhuan
+
+</p>
+</body>
+</html>

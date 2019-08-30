@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu  Lệnh Switch_Case_ Tính Số ngày trong tháng  </title>
+</head>
+<body>
+<form>
+    <h3>Tính số ngày  trong tháng</h3>
+    <input type="text" id="txt_thang"/>
+    <input type="button" id ="btn_TinhThang" onclick="tinhThang();" value="tính số ngày trong tháng"/>
+
+</form>
+<script>
+    function tinhThang(){
+
+        let thang =parseInt(document.getElementById("txt_thang").value);
+
+        switch(thang){
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.write(" Tháng "+thang+ "có 31 ngày"  );
+                break;
+            case 2:
+                document.write(" Tháng "+thang+ "có 28  ngày hoặc 29 ngày "  );
+                break;
+
+            case  4 :
+            case  6 :
+            case  9 :
+            case  11 :
+                document.write(" Tháng "+thang+ "có 30 ngày"  );
+                break;
+            default :
+                document.write(" Nhập sai  tháng !")
+        }
+
+
+
+    }
+
+</script>
+</body>
+</html>
